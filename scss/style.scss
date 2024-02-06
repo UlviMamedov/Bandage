@@ -262,6 +262,16 @@ header {
   font-weight: bolder;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  animation: flash 2s infinite;
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
 }
 
 .description p {
@@ -356,18 +366,27 @@ header {
   line-height: 32px;
 }
 
-.image_block_one_button button {
-  width: 198px;
-  height: 52px;
-  border-radius: 5px;
-  border: 1px solid $white;
-  color: $white;
-  font-weight: 700;
-  font-size: 15px;
-  text-transform: uppercase;
-  background: none;
-  cursor: pointer;
-  margin-top: 5px;
+.image_block_one_button {
+  button {
+    width: 198px;
+    height: 52px;
+    border-radius: 5px;
+    border: 1px solid $white;
+    color: $white;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: none;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.5s;
+  }
+
+  button:hover {
+    background: white;
+    transition: 0.5s;
+    color: rgba(45, 139, 192, 0.75);
+  }
 }
 
 .centered {
@@ -416,6 +435,13 @@ header {
     background: none;
     cursor: pointer;
     margin-top: 5px;
+    transition: 0.5s;
+  }
+
+  button:hover {
+    background: white;
+    transition: 0.5s;
+    color: rgba(45, 139, 192, 0.75);
   }
 }
 
@@ -560,7 +586,14 @@ header {
     font-size: 15px;
     letter-spacing: $letterSpacing2;
     border-radius: 5px;
+    transition: 0.5s;
     cursor: pointer;
+  }
+
+  button:hover {
+    background: $fullAqua;
+    color: $white;
+    transition: 0.5s;
   }
 }
 
